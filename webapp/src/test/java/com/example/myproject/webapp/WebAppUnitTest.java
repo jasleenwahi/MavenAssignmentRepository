@@ -1,4 +1,5 @@
 package com.example.myproject.webapp;
+import com.example.myproject.webapp.Controller.WebAppController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,11 +12,11 @@ import static org.junit.Assert.assertEquals;
 public class WebAppUnitTest {
 
     @Autowired
-    private WebApp webApp;
+    private WebAppController webAppController;
 
     @Test
     public void testGetMessage_WithHelloWorld_ShouldReturnExpectedString(){
-        String message= webApp.returnHelloWorld();
+        String message= webAppController.returnHelloWorld();
         assertEquals("Hello World!",message);
     }
 }
